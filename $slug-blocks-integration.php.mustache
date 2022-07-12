@@ -84,7 +84,8 @@ class {{slugPascalCase}}_Blocks_Integration implements IntegrationInterface {
 	public function get_script_data() {
 		$data = array(
 			'{{slug}}-active' => true,
-			'example-data' => 'This is some example data from the server',
+			'example-data' => __( 'This is some example data from the server', '{{slug}}' ),
+            'optInDefaultText' => __( 'I want to receive updates about products and promotions.', '{{ slug }}' ),
 		);
 
 		return $data;
