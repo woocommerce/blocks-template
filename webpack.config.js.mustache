@@ -35,8 +35,8 @@ const defaultRules = defaultConfig.module.rules.filter( ( rule ) => {
 module.exports = {
 	...defaultConfig,
 	entry: {
-        '{{slug}}-newsletter-block': path.resolve( process.cwd(), 'assets', 'js', 'checkout-newsletter-subscription-block', 'index.js' ),
-        '{{slug}}-newsletter-block-frontend': path.resolve( process.cwd(), 'assets', 'js', 'checkout-newsletter-subscription-block', 'frontend.js' ),
+        '{{slug}}-newsletter-block': path.resolve( process.cwd(), 'src', 'js', 'checkout-newsletter-subscription-block', 'index.js' ),
+        '{{slug}}-newsletter-block-frontend': path.resolve( process.cwd(), 'src', 'js', 'checkout-newsletter-subscription-block', 'frontend.js' ),
 	},
 	module: {
 		...defaultConfig.module,
