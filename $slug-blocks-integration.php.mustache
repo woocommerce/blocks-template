@@ -25,6 +25,7 @@ class {{slugPascalCase}}_Blocks_Integration implements IntegrationInterface {
 		$this->register_frontend_scripts();
 		$this->register_editor_scripts();
 		$this->register_editor_blocks();
+        $this->register_editor_styles();
 		$script_path = '/build/index.js';
 		$style_path  = '/build/style-index.css';
 
@@ -93,6 +94,18 @@ class {{slugPascalCase}}_Blocks_Integration implements IntegrationInterface {
 		return $data;
 
 	}
+
+    public function register_editor_styles() {
+        $style_path  = '/build/style-{{slug}}-checkout-newsletter-subscription-block.css';
+
+        $style_url  = plugins_url( $style_path, __FILE__ );
+        wp_enqueue_style(
+            '{{slug}}-blocks-integration',
+            $style_url,
+            [],
+            $this->get_file_version( $style_path )
+        );
+    }
 
     public function register_editor_scripts() {
         $script_path       = '/build/{{slug}}-checkout-newsletter-subscription-block.js';
