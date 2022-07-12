@@ -66,7 +66,7 @@ class {{slugPascalCase}}_Blocks_Integration implements IntegrationInterface {
 	 * @return string[]
 	 */
 	public function get_script_handles() {
-		return array( '{{slug}}-blocks-integration' );
+		return array( '{{slug}}-blocks-integration', '{{slug}}-checkout-newsletter-subscription-block-frontend' );
 	}
 
 	/**
@@ -75,7 +75,7 @@ class {{slugPascalCase}}_Blocks_Integration implements IntegrationInterface {
 	 * @return string[]
 	 */
 	public function get_editor_script_handles() {
-		return array( '{{slug}}-blocks-integration',  );
+		return array( '{{slug}}-blocks-integration', '{{slug}}-checkout-newsletter-subscription-block-editor' );
 	}
 
 	/**
